@@ -1,7 +1,23 @@
-import { Container,Profile,Brand,InputHeader  } from './styles';
-import { RiShutDownLine } from "react-icons/ri";
+import { Container,Profile,Brand,InputHeader,Logout  } from './styles';
+import { useAuth } from '../../hooks/auth';
+import{ api } from '../../services/api';
+
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export function Header(){
+    const { signOut,user } = useAuth();
+
+    
+    const navigate = useNavigate();
+
+    function handleSignOut(){
+        navigate("/");
+        signOut();
+
+    }
+
+
+
     return(
         <Container>
            
@@ -14,15 +30,18 @@ export function Header(){
                          </InputHeader>
                
                          <Profile to="/profile">
-                    <div>
-                        <strong>Frederico Nakajima</strong>
-                        <span>sair</span>
-                    </div>
-               
-                    <img
-                    src='https://github.com/frederico-nakajima.png'
-                    alt='foto do usuário'
-                    />
+                            <div>
+                                <strong>Frederico Nakajima</strong>
+                                <Logout onClick={handleSignOut}>
+                                    sair
+                                </Logout>
+                                
+                            </div>
+                    
+                            <img
+                            src='https://github.com/frederico-nakajima.png'
+                            alt='foto do usuário'
+                            />
                          </Profile>
            </main>
               

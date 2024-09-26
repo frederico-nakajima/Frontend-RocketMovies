@@ -66,20 +66,20 @@ export const Profile = styled(Link)`
         justify-content: center;
         
         margin-right: 9px;
-        >span{
-            font-size: 14px;
-            color:${({theme}) => theme.COLORS.GRAY_300};
-          
-        }
-
+        
         >strong{
             font-size: 14px;
             color:${({theme}) => theme.COLORS.WHITE};
-           
-        }
-    }
-
-`;
-
-
-
+            
+            }
+            }
+            
+`;             
+            
+            
+export const Logout = styled.span`
+            
+                font-size: 14px;
+                color:${({theme}) => theme.COLORS.GRAY_300};
+              
+ `;           

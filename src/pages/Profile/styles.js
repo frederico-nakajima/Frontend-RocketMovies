@@ -16,16 +16,21 @@ export const Container = styled.div`
 
         padding: 0 124px;
 
-        >a{
+        >button{
+        font-size: 18px;
         display: flex;  
         align-items: center; 
-        
+        background:transparent;
+        border:none;
         color: ${({ theme }) => theme.COLORS.PINK};
         align-self: center;
+        
+            
         svg {
             margin-right: 8px; 
-          
+            
         }
+    }
     }
     }
 `;

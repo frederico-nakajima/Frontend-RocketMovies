@@ -13,14 +13,25 @@ export const Container = styled.button`
     >h1{
         flex: 1;
         text-align: left;
-        font-weight: 700;
+        font-family: "Roboto Slab";
         font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
         color:${({theme}) => theme.COLORS.WHITE};
     }
     >p{
         color:${({theme}) => theme.COLORS.GRAY_200};
         text-align: justify;
         margin: 15px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
    
 

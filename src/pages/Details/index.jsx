@@ -58,13 +58,19 @@ export function Details(){
                 <Content>
                    
 
-                <div className='stars'>
-                        <h1>{data.title}</h1>
-                        
-                        <RatingStars rating={data.rating} />
+                    <div className='stars'>
+                            <h1>{data.title}</h1>
+                            
+                            <RatingStars rating={data.rating}/>
                     </div>
 
-                    <p className="auth"><img src="https://github.com/frederico-nakajima.png" alt="" /><span>Por Rodrigo Gonçalves</span><MdAccessTime /><span> 23/05/22 às 08:00</span></p>
+                    <p className="auth">
+                        <img src="https://github.com/frederico-nakajima.png" 
+                        alt="" />
+                        <span>Por Rodrigo Gonçalves</span>
+                        <MdAccessTime />
+                        <span> 23/05/22 às 08:00</span>
+                    </p>
                     <Tags>
                         {   
                             data.tags.map(tag => (
@@ -75,7 +81,7 @@ export function Details(){
                             ))
                         }
                     </Tags>
-                    <p>
+                    <p className='description'>
                         {data.description}
                     </p>
 

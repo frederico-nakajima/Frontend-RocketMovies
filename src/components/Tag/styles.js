@@ -8,7 +8,12 @@ export const Container = styled.span`
     margin-right: 6px;
     color:${({theme}) => theme.COLORS.GRAY_50};
     background-color:${({theme}) => theme.COLORS.BACKGROUND_TAG};
-
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
 
 `;

@@ -11,7 +11,7 @@ export function RatingStars({ rating }) {
             {Array.from({ length: totalStars }, (_, index) => (
                 <FaStar
                     key={index}
-                    size={12}
+                    
                     color={index < filledStars ? "#FF859B" : "#e4e5e9"} 
                 />
             ))}

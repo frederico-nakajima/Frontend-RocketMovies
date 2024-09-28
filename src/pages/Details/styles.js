@@ -37,7 +37,7 @@ export const Container = styled.div`
 export const HeaderLink = styled.div`
     
      display: flex;
-     width: 1137px;
+     width:  1160px;
      justify-content: flex-start;
      align-items: center;
      margin: 0 auto;
@@ -71,24 +71,22 @@ export const Content = styled.div`
     height: 581px;
     overflow-y: scroll;
     padding-right: 24px;
-  
+    position:relative;
+
     .stars{
         display: flex;
-        
         align-items: center;
+       
         >h1{
             font-size: 36px;
             font-weight: 500;
-        }   
-       .star{
-        color: ${({ theme }) => theme.COLORS.PINK};
-        margin-left: 19px;
-        font-size: 16px;
-        display: flex;
-        gap: 8px;
+            margin-right:20px;
+        }
+    }
         
-       }
-}
+        
+      
+     
     .auth{
         display: flex;
         flex-direction: row;
@@ -104,11 +102,20 @@ export const Content = styled.div`
             width: 16px;
             height: 16px;       
         }
+        p{
+            font-size: 16px;
+            
+            text-align: justify;
+        }
     }
-    >p{
-        font-size: 16px;
-        
+
+    .description{
         text-align: justify;
+        font-family: "Roboto Slab";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
    
 `;
@@ -117,9 +124,9 @@ export const Tags = styled.div`
     display: flex;
     margin: 40px 0;
 
-
-
 `;
+
+
 
 
    

@@ -1,13 +1,17 @@
 import { Container,Profile,Brand,InputHeader,Logout  } from './styles';
 import { useAuth } from '../../hooks/auth';
 import{ api } from '../../services/api';
-
+import { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
+import avatarPlaceHolder from '../../assets/avatar_placeholder.svg';
 
-export function Header(){
+
+
+export function Header({ setSearch }){
     const { signOut,user } = useAuth();
+    const [localSearch,setLocalSearch] = useState("");
 
-    
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceHolder;
     const navigate = useNavigate();
 
     function handleSignOut(){
@@ -16,6 +20,10 @@ export function Header(){
 
     }
 
+    function handleSearchChange(e) {
+        setLocalSearch(e.target.value); 
+        setSearch(e.target.value);       
+    }
 
 
     return(
@@ -26,12 +34,16 @@ export function Header(){
                     <h2>Rocketnotes</h2>
                 </Brand>
                
-                         <InputHeader placeholder='Pesquisar pelo título'>
-                         </InputHeader>
+                         <InputHeader 
+                            placeholder='Pesquisar pelo título'
+                            value={localSearch}
+                            onChange={handleSearchChange}  
+                         />
+                         
                
                          <Profile to="/profile">
                             <div>
-                                <strong>Frederico Nakajima</strong>
+                                <strong>{user.name}</strong>
                                 <Logout onClick={handleSignOut}>
                                     sair
                                 </Logout>
@@ -39,8 +51,8 @@ export function Header(){
                             </div>
                     
                             <img
-                            src='https://github.com/frederico-nakajima.png'
-                            alt='foto do usuário'
+                            src={avatarUrl}
+                            alt={user.name}
                             />
                          </Profile>
            </main>

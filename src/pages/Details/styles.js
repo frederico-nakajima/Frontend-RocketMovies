@@ -42,10 +42,18 @@ export const HeaderLink = styled.div`
      align-items: center;
      margin: 0 auto;
 
-     >a{
+     >button{
         color: ${({ theme }) => theme.COLORS.PINK};
         display: flex;
         align-items: center;
+        background:none;
+        border:none;
+        font-size: 16px;
+
+
+        svg{
+        font-size: 16px;
+        }
      }
 
 `;
@@ -105,7 +113,7 @@ export const Content = styled.div`
    
 `;
 
-export const Links = styled.div`
+export const Tags = styled.div`
     display: flex;
     margin: 40px 0;
 

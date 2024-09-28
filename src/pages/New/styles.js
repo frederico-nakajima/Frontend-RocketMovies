@@ -6,7 +6,7 @@ export const Container = styled.div`
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 105px 85px auto;
+    grid-template-rows: 105px 85px 100px;
     grid-template-areas:
     "header"
     "link"
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
     ::-webkit-scrollbar{
         width: 6px;
-            
+           
 
     }
     ::-webkit-scrollbar-thumb{
@@ -27,6 +27,7 @@ export const Container = styled.div`
         grid-area: content;
 
         width: 1137px;
+        height:650px;
         overflow-y: scroll;
         padding-right: 24px;
         margin: 0 auto 85px;
@@ -90,10 +91,13 @@ export const TopLink = styled.div`
     width: 1137px;
     color: ${({ theme }) => theme.COLORS.PINK}; 
 
-    >a{
+    >button{
         color: ${({ theme }) => theme.COLORS.PINK};
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
         display: flex;
         align-items: center;
+        font-size: 16px;
+        border:none;
      }
 
 
@@ -102,8 +106,8 @@ export const TopLink = styled.div`
 
 export const Form = styled.form`
     
-    margin: 0 auto 85px;
-    height: 732px;
+    margin: 0 auto 0px;
+    height: 651px;
     >header{
         display: flex;
         align-items: center;

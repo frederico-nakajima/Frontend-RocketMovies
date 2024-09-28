@@ -6,11 +6,11 @@ export const Container = styled.div`
     align-items: center;
 
 
-    background-color: ${({theme,isnew}) => isnew==="true" ? "transparent" : theme.COLORS.BACKGROUND_900};
+    background-color: ${({theme,$isnew}) => $isnew ? "transparent" : theme.COLORS.BACKGROUND_900};
     color: ${({theme}) => theme.COLORS.GRAY_300};
 
     
-    border: ${({theme,isnew}) => isnew==="true" ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
+    border: ${({theme,$isnew}) => $isnew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
 
 
    
@@ -21,6 +21,8 @@ export const Container = styled.div`
     >button{
         border: none;
         background: none;
+
+        
     }
 
     .button-delete{
@@ -41,7 +43,10 @@ export const Container = styled.div`
         background: transparent;
 
         border: none;
-
+        
+        &:focus {
+        outline: none;
+        }
         &::placeholder{
             color: ${({theme}) => theme.COLORS.GRAY_300};
         }

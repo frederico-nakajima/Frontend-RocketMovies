@@ -3,23 +3,23 @@ import { FiPlus,FiX} from 'react-icons/fi';
 
 
 
-export function NoteItem({isnew=false, value, onClick, ...rest}){
+export function NoteItem({isNew=false, value, onClick, ...rest}){
     return(
         <Container
-        isnew={isnew.toString()}>
+        $isnew={isNew}>
             <input
             type="text"
             value={value}
-            readOnly={!isnew}
+            readOnly={!isNew}
             {...rest}
             />
 
             <button 
             type='button'
             onClick={onClick}
-            className={isnew ? "button-add ": "button-delete"}
+            className={isNew ? "button-add ": "button-delete"}
             >
-                {isnew ? <FiPlus/> : <FiX/>}
+                {isNew ? <FiPlus/> : <FiX/>}
             </button>
         </Container>
     )

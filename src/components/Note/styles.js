@@ -39,5 +39,5 @@ export const Container = styled.button`
 export const StarsContainer = styled.div`
   display: flex;
   gap: 4px; 
-  margin-top: 8px; 
+  margin-top: 8px 0; 
 `;

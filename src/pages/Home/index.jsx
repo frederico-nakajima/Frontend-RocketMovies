@@ -43,20 +43,19 @@ export function Home(){
                 <h1>Meus filmes</h1>
                 <NewNote to="/new">
                     <FiPlus/>
-                    Criar nota
+                    Adicionar filme
                 </NewNote>
             </div>
 
             <Content>
                 
-                <Section>
+            <Section>
                     {notes.length > 0 ? (
                         notes.map(note => (
-                            <Note
-                                key={String(note.id)}
-                                data={note}
-                                onClick={() => handleDetails(note.id)}
-                            />
+                            <div key={String(note.id)} onClick={() => handleDetails(note.id)}>
+                                <Note data={note} />
+                                 
+                            </div>
                         ))
                     ) : (
                         <p>Nenhuma nota encontrada</p>  

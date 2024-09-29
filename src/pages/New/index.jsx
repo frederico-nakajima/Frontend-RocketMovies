@@ -41,10 +41,13 @@ export function New(){
         if(!rating){
             return alert("Digite a avaliação do filme");
         }
-      
-        if(newTag){
-            return alert("Você deixou uma tag no campo para adicionar, mas não clickou em adicionar ");
+        if (rating < 0 || rating > 5){
+            return alert("Digite a avaliação do filme entre de 0 a 5");
         }
+      
+        if (!newTag && tags.length === 0) {
+        return alert("Você deve adicionar pelo menos uma tag.");
+    }
      
 
         await api.post("/notes", {
@@ -90,7 +93,7 @@ export function New(){
                         
                         <Input 
                             placeholder = "Sua nota (de 0 a 5)"
-                            onChange = {e => setRating(e.target.value)}
+                            onChange={e => setRating(Number(e.target.value))}
                         />
                     </div>
 

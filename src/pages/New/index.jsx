@@ -33,6 +33,25 @@ export function New(){
         navigate(-1);
     }
 
+    function handleClearFields() {
+        if (title !== "") {
+            setTitle("");
+        }
+        if (description !== "") {
+            setDescription("");
+        }
+        if (tags.length > 0) {
+            setTags([]);
+        }
+        if (newTag !== "") {
+            setNewTag("");
+        }
+        if (rating !== "") {
+            setRating("");
+        }
+    }
+    
+
     async function handleNewNote(){
         if(!title){
             return alert("Digite o título da filme");
@@ -89,20 +108,23 @@ export function New(){
                         <Input 
                             placeholder = "Título"
                             onChange = {e => setTitle(e.target.value)}
+                            value={title}
                         />
                         
                         <Input 
                             placeholder = "Sua nota (de 0 a 5)"
                             onChange={e => setRating(Number(e.target.value))}
+                            value={rating}
                         />
                     </div>
 
 
 
                     <Textarea 
-                        placeholder = "Observações"
-                        onChange = {e => setDescription(e.target.value)}
-                    />
+                        placeholder="Observações"
+                        onChange={e => setDescription(e.target.value)} // 
+                        value={description} 
+/>
 
                 
 
@@ -129,7 +151,7 @@ export function New(){
                     </Section>
 
                     <div className="buttons">
-                        <Button title="Excluir filme"/>
+                        <Button title="Excluir filme" onClick={handleClearFields} />
                         <Button title="Salvar alterações" onClick= {handleNewNote}/>
                     </div>
                 </Form>

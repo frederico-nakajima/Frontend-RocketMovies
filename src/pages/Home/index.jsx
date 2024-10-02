@@ -49,7 +49,7 @@ export function Home(){
 
             <Content>
                 
-            <Section>
+                <Section>
                     {notes.length > 0 ? (
                         notes.map(note => (
                             <div key={String(note.id)} onClick={() => handleDetails(note.id)}>

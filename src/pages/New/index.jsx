@@ -113,7 +113,7 @@ export function New(){
                         
                         <Input 
                             placeholder = "Sua nota (de 0 a 5)"
-                            onChange={e => setRating(Number(e.target.value))}
+                            onChange={e => setRating(e.target.value)}
                             value={rating}
                         />
                     </div>
@@ -122,7 +122,7 @@ export function New(){
 
                     <Textarea 
                         placeholder="Observações"
-                        onChange={e => setDescription(e.target.value)} // 
+                        onChange={e => setDescription(e.target.value)} // Atualiza o estado
                         value={description} 
 />
 

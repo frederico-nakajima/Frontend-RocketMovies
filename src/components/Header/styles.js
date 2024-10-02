@@ -43,6 +43,10 @@ export const InputHeader = styled.input`
     border: none;
     padding: 19px 24px;
 
+      &:focus {
+        outline: none; 
+    }
+
 `;
 
 export const Profile = styled(Link)`

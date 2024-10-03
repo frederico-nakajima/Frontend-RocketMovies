@@ -7,10 +7,16 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { useParams, useNavigate } from "react-router-dom";
 import { MdAccessTime } from "react-icons/md";
 import { RatingStars } from '../../components/RatingStars';
+import avatarPlaceHolder from '../../assets/avatar_placeholder.svg';
+import { useAuth } from '../../hooks/auth';
+import { format, parseISO } from 'date-fns';
 
 
 export function Details(){
     const [data, setData] = useState(null);
+   
+    const { user } = useAuth();
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceHolder;
 
     const params = useParams();
     const navigate = useNavigate();
@@ -41,6 +47,8 @@ export function Details(){
     }
 
     
+    const formattedDate = format(parseISO(data.created_at), 'dd/MM/yy \'às\' HH:mm');
+    
     return(
         <Container>
             <Header/>
@@ -65,11 +73,13 @@ export function Details(){
                     </div>
 
                     <p className="auth">
-                        <img src="https://github.com/frederico-nakajima.png" 
-                        alt="" />
-                        <span>Por Rodrigo Gonçalves</span>
+                        <img
+                            src={avatarUrl}
+                            alt={user.name}
+                        />
+                        <span>Por: {user.name}</span>
                         <MdAccessTime />
-                        <span> 23/05/22 às 08:00</span>
+                        <span> {formattedDate}</span>
                     </p>
                     <Tags>
                         {   

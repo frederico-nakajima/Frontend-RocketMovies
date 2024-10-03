@@ -47,12 +47,12 @@ export function Header({ setSearch }){
                                 <Logout onClick={handleSignOut}>
                                     sair
                                 </Logout>
-                                
                             </div>
+                                
                     
                             <img
-                            src={avatarUrl}
-                            alt={user.name}
+                                src={avatarUrl}
+                                alt={user.name}
                             />
                          </Profile>
            </main>

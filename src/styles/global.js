@@ -36,4 +36,15 @@ export default createGlobalStyle`
 
     }
 
+    ::-webkit-scrollbar{
+        width: 6px;
+           
+
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: #FF859B;
+        border-radius: 6px;
+    }
+
 `

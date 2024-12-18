@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom'
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
-    
+      overflow: hidden;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 105px 133px auto;

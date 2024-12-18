@@ -3,8 +3,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    height: 100vh;
-
+    height: 750px;
+    
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-rows: 105px 85px 100px;
     grid-template-areas:
@@ -12,25 +14,16 @@ export const Container = styled.div`
     "link"
     "content";
 
-    ::-webkit-scrollbar{
-        width: 6px;
-           
-
-    }
-    ::-webkit-scrollbar-thumb{
-        background-color: ${({ theme }) => theme.COLORS.PINK};
-        border-radius: 6px;
-    }
    
 
     >main{
         grid-area: content;
 
         width: 1137px;
-        height:650px;
+        height:550px;
         overflow-y: scroll;
         padding-right: 24px;
-        margin: 0 auto 85px;
+        margin: 0 auto 65px;
 
        
       
@@ -40,7 +33,7 @@ export const Container = styled.div`
             align-items: center;
             justify-content: space-between;
             gap: 40px;
-            margin: 40px 2px;
+            margin: 20px 2px;
 
         }
         .buttons{
@@ -113,7 +106,7 @@ export const Form = styled.form`
         align-items: center;
         justify-content: space-between;
 
-        margin-bottom: 36px;
+       
 
        
     }

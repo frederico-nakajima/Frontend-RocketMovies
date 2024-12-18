@@ -18,19 +18,14 @@ export const Container = styled.div`
 
     >main{
         grid-area: content;
-        overflow-y: auto;
+        overflow-y: scroll;
+        max-width: 1160px;
+        height: 581px;
+        margin-left: 275px;
 
-        ::-webkit-scrollbar{
-            width: 6px;
-            
-
-        }
-        ::-webkit-scrollbar-thumb{
-            background-color: ${({ theme }) => theme.COLORS.PINK};
-            border-radius: 6px;
-        }
             
     }
+    
   
 `;
 
@@ -65,11 +60,12 @@ export const HeaderLink = styled.div`
 export const Content = styled.div`
     
     margin: 0 auto;
-    max-width: 1160px;
+   
+    height: 400px;
     display: flex;
     flex-direction: column;
-    height: 581px;
-    overflow-y: scroll;
+   
+   
     padding-right: 24px;
     position:relative;
 

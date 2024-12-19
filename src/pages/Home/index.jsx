@@ -47,22 +47,24 @@ export function Home(){
                 </NewNote>
             </div>
 
-            <Content>
+            <main>
+                <Content>
                 
-                <Section>
-                    {notes.length > 0 ? (
-                        notes.map(note => (
-                            <div key={String(note.id)} onClick={() => handleDetails(note.id)}>
-                                <Note data={note} />
-                                 
-                            </div>
-                        ))
-                    ) : (
-                        <p>Nenhuma nota encontrada</p>  
-                    )}
-                </Section>
-                  
-            </Content>
+                    <Section>
+                        {notes.length > 0 ? (
+                            notes.map(note => (
+                                <div key={String(note.id)} onClick={() => handleDetails(note.id)}>
+                                    <Note data={note} />
+                
+                                </div>
+                            ))
+                        ) : (
+                            <p>Nenhuma nota encontrada</p>
+                        )}
+                    </Section>
+                
+                </Content>
+            </main>
               
            
         </Container>

@@ -32,6 +32,13 @@ export const Container = styled.div`
             font-weight: 400;
         }
     }
+    >main{
+        grid-area: content;
+        overflow-y: scroll;
+        padding: 64px 0;
+        width: 1167px;
+        margin: 0 auto 60px;
+    }
 
     ::-webkit-scrollbar{
         width: 6px;

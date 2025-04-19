@@ -16,32 +16,7 @@
 <br>
 
 <p align="center">
-  <img alt="SignIn" src="src/assets/SignIn (1).png" width="60%">
-</p>
-<br>
-
-<p align="center">
-  <img alt="SignUp" src="src/assets/SignUp (1).png" width="60%">
-</p>
-<br>
-
-<p align="center">
-  <img alt="Home" src="src/assets/Home (2).png" width="60%">
-</p>
-<br>
-
-<p align="center">
-  <img alt="Note Create" src="src/assets/Create Movie.png" width="60%">
-</p>
-<br>
-
-<p align="center">
-  <img alt="detalhes da nota escolhida" src="src/assets/Movie Preview.png" width="60%">
-</p>
-<br>
-
-<p align="center">
-  <img alt="Perfil" src="src/assets/Perfil (1).png" width="60%">
+  <img alt="SignIn" src="src/assets/Capa.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
